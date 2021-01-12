@@ -1,0 +1,1086 @@
+$font-titolo: "Bebas Neue";
+$font-mono: 'Roboto Mono', monospace;
+$colore-sfondo: #121212;
+$colore-scuro: #121212;
+$colore-testo: white;
+$neutro: #c5c5c5;
+$colore-home: #ffff31;
+$colore1: #00FF62;
+$colore2: #17dcb4;
+$colore3: #0092FF;
+$colore4: #FFF650;
+
+.home {
+    --colore-principale: #ffff31;
+    --colore-cursore: #ffff31;
+}
+.uno {
+    --colore-principale: #00FF62;
+    --colore-cursore: white;
+}
+.due {
+    --colore-principale: #2fd1b1;
+    --colore-cursore: white;
+}
+.tre {
+    --colore-principale: #0092FF;
+    --colore-cursore: white;
+}
+.quattro {
+    --colore-principale: #ffff31;
+    --colore-cursore: white;
+}
+
+.colore-uno {
+    --colore-principale: #0092FF !important;
+}
+.colore-due {
+    --colore-principale: #D292C0 !important;
+    --colore-riquadro: #b869a2 !important;
+    --colore-cursore: white;
+}
+.colore-tre {
+    --colore-principale: #95C11F !important;
+    --colore-riquadro: #7a9f16 !important;
+    --colore-cursore: white;
+}
+.colore-quattro {
+    --colore-principale: #E7BE00 !important;
+    --colore-riquadro: #ba8f00 !important;
+    --colore-cursore: white;
+}
+.colore-cinque {
+    --colore-principale: #FFF650 !important;
+    --colore-riquadro: #f7c036 !important;
+    --colore-cursore: white;
+}
+.colore-sei {
+    --colore-principale: #FA4646 !important;
+    --colore-riquadro: #962727 !important;
+    --colore-cursore: white;
+}
+.colore-sette {
+    --colore-principale: #487797 !important;
+    --colore-riquadro: #29506a !important;
+    --colore-cursore: white;
+}
+
+$colore-principale: var(--colore-principale);
+$colore-cursore: var(--colore-cursore);
+$colore-riquadro: var(--colore-riquadro);
+
+
+body{
+    font-family: Helvetica;
+    background-color: $colore-principale !important;
+    color: $colore-testo !important;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a{
+    &:hover{
+        text-decoration: none !important;
+    }
+}
+
+.loading{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: $colore-scuro;
+    z-index: 999;
+    svg{
+        height: 100%;
+        width: auto;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        display: block;
+        opacity: 1;
+    }
+
+    1% {
+        display: none;
+        opacity: 1;
+    }
+
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
+
+.sfondo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -99;
+    transition: background-color 0.5s;
+    background-color: $colore-principale;
+    figure{
+        height: 97vh;
+        width: calc(100% - 3vh);
+        background-color: $colore-sfondo;
+        background-image: url(../img/disturbo.png);
+        background-blend-mode: screen;
+        background-size: 10px;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .motion{
+            opacity: .035;
+            background: url(../img/noise.gif) repeat 50%;
+            height: 100%;
+        }
+    }
+}
+
+.animazione{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    .contenitore-animazione{
+        svg{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100vh;
+            z-index: -99;
+        }
+    }
+
+}
+  
+@keyframes dash {
+    to {
+        stroke-dashoffset: -2000;
+    }
+}
+  
+.path{
+    animation-name: dash;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+    stroke-linecap: round;
+    stroke-dasharray: 300 5000000;
+    stroke-dashoffset: 1000;
+    stroke: $colore-principale !important;
+    stroke-width: 1px !important;
+    animation-duration: 20s;
+    fill: transparent;
+    transition-duration: 0.5s;
+}
+
+.path2{
+    stroke-width: 15px !important;
+}
+
+@keyframes dashlogo1 {
+    to {
+        stroke-dashoffset: 100%;
+    }
+}
+
+@keyframes dashlogo2 {
+    to {
+        stroke-dashoffset: 100%;
+    }
+}
+
+.pathlogo1{
+    animation-name: dashlogo1;
+    animation-iteration-count: infinite;
+    animation-direction: forwards;
+    stroke-linecap: round;
+    stroke-dasharray: 700 700;
+    stroke-dashoffset: 50;
+    stroke: $colore-home !important;
+    stroke-width: 4px !important;
+    animation-duration: 1s;
+    fill:none;
+}
+
+.pathlogo2{
+    animation-name: dashlogo2;
+    animation-iteration-count: infinite;
+    stroke-linecap: round;
+    stroke-dasharray: 700 700;
+    stroke-dashoffset: 50;
+    stroke: $colore-home !important;
+    stroke-width: 4px !important;
+    animation-duration: 1s;
+    animation-delay: -1.3s;
+    animation-direction: reverse;
+    fill:none;
+}
+
+.linea{
+    display: none;
+}
+
+h1{
+    font-family: $font-titolo;
+}
+
+.header{
+    overflow: hidden;
+}
+
+.content-header{
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+    padding-top: 10vh;
+}
+
+.container-fluid{
+    padding: 20vh !important;
+    margin-top: 100vh;
+    background-color: $colore-principale;
+    transition-duration: 0.5s;
+    color: $colore-sfondo;
+    font-family: $font-mono;
+    a{
+        color: $colore-sfondo;
+        &:hover{
+            color: $colore-sfondo;
+        }
+    }
+}
+
+.contenitore-nome{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    .nome{
+        position: absolute;
+        top: 1vh;
+        left: 50%;
+        font-size: 19.5vw;
+        text-align: center;
+        transform: translateX(-50%);
+        width: 100%;
+        color: transparent;
+        -webkit-text-stroke: 1px $colore-testo;
+    }
+}
+
+.cnpagina{
+    top: 50vh;
+    transform: translateY(-50%);
+    height: 35vh;
+    .nome{
+        font-size: 30vh;
+        margin-bottom: 0 !important;
+    }
+}
+
+.sottotitolo{
+    position: absolute;
+    top: 40vh;
+    width: 65%;
+    font-size: 4vh;
+    text-align: center;
+    font-family: $font-mono;
+    color: $colore-testo;
+    line-height: 6vh;
+}
+.s1{
+
+}
+.s2{
+    right: 0;
+}
+
+.professione{
+    font-size: 4vh;
+    text-align: right;
+}
+
+.container-foto{
+    text-align: right;
+    padding: 0 !important;
+    .foto{
+        height: 60vh;
+        path{
+        
+            fill: transparent;
+            stroke: $colore-principale !important;
+            stroke-width: 2px !important;
+            transition-duration: 0.5s;
+    
+        }
+
+        circle{
+            fill: $colore-principale !important;
+            stroke: $colore-principale !important;
+            transition-duration: 0.5s;
+        }
+        
+    }
+}
+
+.container-foto-destra{
+    text-align: right;
+}
+
+.container-codici{
+    font-size: 2vh;
+    line-height: calc(2.5vh*1.1);
+    color: $colore-home;
+    font-family: $font-mono;
+    padding: 0 !important;
+    padding-top: 1.8vh !important;
+    .codici{
+        margin-bottom: -0.5vh !important;
+    }
+}
+
+.hover1{
+    color: $colore1;
+}
+
+.hover2{
+    color: $colore2;
+}
+
+.hover3{
+    color: $colore3;
+}
+
+.hover4{
+    color: $colore4;
+}
+
+.container-menu {
+    margin-top: 10vh;
+    .menu{
+        font-family: $font-titolo;
+        font-size: 5vh;
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            float: left;
+            position: relative;
+            height: calc(7vh + 1px);
+            width: 23vh;
+            overflow: hidden;
+            border-top: 2px solid $colore-testo;
+            border-bottom: 2px solid $colore-testo;
+            .sopra{
+                transition-duration: 0.5s;
+                height: 7vh;
+            }
+            &:hover{
+                .sopra{
+                    margin-top: -7vh;
+                }
+                .sottolineato{
+                    top: 0;
+                }
+            }
+        }
+
+        li a {
+            color: $colore-testo;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            width: 100%;
+            height: 14vh;
+        }
+
+        li a:hover {
+            transition-duration: 0.5s;
+        }
+
+        .chisono{
+            position: absolute;
+            left: 0;
+            top:3vh;
+            opacity: 0;
+            transform: translateY(0vh);
+            transition: trans 0.5s, top 0.5s;
+        }
+
+        .curriculum{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top:3vh;
+            opacity: 0;
+            transition: opacity 0.5s, top 0.5s;
+        }
+
+        .portfolio{
+            position: absolute;
+            right: 0;
+            top:3vh;
+            opacity: 0;
+            transition: opacity 0.5s, top 0.5s;
+        }
+
+        .sottolineato{
+            width: 100%;
+            height: 7vh;
+            position: absolute;
+            top: 7vh;
+            z-index: -1;
+            left: 0;
+            transition-duration: 0.5s;
+            color: $colore-scuro;
+            background-color: $colore-principale;
+        }
+
+    }
+}
+
+.contatti{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: "Bebas Neue";
+    background-color: $colore-principale;
+    color: $colore-scuro;
+    transition-duration: 0.5s;
+    width: 21vh;
+    overflow: hidden;
+    z-index: 9;
+    .ctitolo{
+        padding: 2vh 3vh;
+        font-size: 4vh;
+        margin-bottom: 0 !important;
+    }
+    .ctesto{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 !important;
+        width: calc(100vw - 26vh);
+        font-size: 3vh;
+        font-family: $font-mono;
+        font-weight: bold;
+    }
+    #ctesto1{
+        left: 23vh;
+    }
+    #ctesto2{
+        right: 23vh;
+    }
+}
+
+.tech-slideshow {
+    overflow: hidden;
+}
+
+.moverdx, .moversx{
+    margin: 0 !important;
+    float: left;
+    animation: moveSlideshow 4s linear infinite;
+}
+
+.moversx{
+    animation-direction: reverse;
+}
+
+.mover-2{
+    position: absolute;
+    left: 23vh;
+}
+  
+@keyframes moveSlideshow {
+    100% { 
+        transform: translateX(-100%);  
+    }
+}
+
+html {
+    cursor: none;
+    a{
+        cursor: none;
+    }
+}
+
+#cursor {
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    position: fixed;
+    z-index: 999;
+    pointer-events: none;
+    svg{
+        position: absolute;
+    }
+    .circle{
+        transition: stroke 0.5s;
+    }
+}
+#cursorbig {
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    z-index: 999;
+    pointer-events: none;
+    border-color: $colore-home;
+    transition: transform 0.5s;
+    .triangle{
+        transition: stroke 0.5s;
+    }
+}
+
+.hov{
+    animation: rotating 2s linear infinite;
+}
+
+@keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+@keyframes scale {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.5);
+    }
+  }
+
+.loading{
+    //display: none;
+}
+
+.triangle{
+    stroke: $colore-cursore;
+    stroke-width: 10px;
+    fill: transparent !important;
+}
+
+.circle{
+    fill: $colore-cursore;
+}
+
+.cursor-color{
+    .circle{
+        fill: $colore-principale;
+    }
+}
+
+.cursorbig-color{
+    .triangle{
+        stroke: $colore-principale;
+    }
+}
+
+.scroll-down{
+    position: absolute;
+    top: 70vh;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: $font-mono;
+    text-transform: lowercase;
+    .vedi{
+        font-size: 3.5vh;
+        color: $colore-testo;
+        margin-bottom: 2vh;
+        transition-duration: 0.5s;
+    }
+    svg{
+        height: 4vh;
+        .freccia{
+            fill: transparent;
+            stroke: $colore-testo;
+            stroke-width: 10px;
+            transition-duration: 0.5s;
+        }
+    }
+
+    &:hover{
+        .vedi{
+            color: $colore-principale;
+        }
+        svg{
+            .freccia{
+                stroke: $colore-principale;
+            }
+        }
+    }
+}
+
+.indietro{
+    top: 18vh;
+    .vedi{
+        margin-top: 2vh;
+    }
+    svg{
+        transform: rotate(180deg);
+    }
+}
+.indietro-progetto{
+    top: 9vh;
+}
+
+.fascia-progetto{
+    &:last-child{
+        .fascia{
+            margin-bottom: 0 !important;
+        }
+    }
+    .fascia{
+        margin-bottom: 20vh;
+        display: flex;
+        align-items: center;
+        .blocco{
+            padding: 0 !important;
+            .img-progetto{
+                height: 60vh;
+                position: relative;
+                margin-bottom: 0 !important;
+                overflow: hidden;
+                transition: all 0.5s;
+                img{
+                    position: absolute;
+                    top:50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    object-fit: cover;
+                    max-height: 100%;
+                    max-width: 100%;
+                    padding: 3vh;
+                    filter: grayscale(100%);
+                }
+            }
+            .blocco-content{
+                position: relative;
+                padding-right: 10vh;
+                padding-left: 10vh;
+                padding-bottom: 6.2vh;
+                .eyebrow{
+                    font-size: 4vh;
+                    color: $colore-testo;
+                    margin-bottom: 4vh !important;
+                }
+                .titolo-progetto{
+                    font-size: 15vh;
+                    line-height: 14vh;
+                    margin-bottom: 4vh !important;
+                    color: $colore-testo;
+                }
+                .bottone{
+                    position: absolute;
+                    right: 10vh;
+                    min-width: 28.05vh;
+                    overflow: hidden;
+                    height: 6.2vh;
+                    border-top: 2px solid $colore-testo;
+                    border-bottom: 2px solid $colore-testo;
+                    .cta{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        font-size: 2.5vh;
+                        padding: 1vh 2vh;
+                        color: $colore-testo;
+                        transition: all 0.5s;
+                    }
+                    #cta2{
+                        top: 6.2vh;
+                        background-color: $colore-principale;
+                        color: $colore-riquadro;
+                    }
+                    &:hover{
+                        #cta1{
+                            top: -6.2vh;
+                        }
+                        #cta2{
+                            top: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .fascia-destra{
+        display: flex;
+        flex-direction: row-reverse;
+        text-align: right;
+
+    }
+
+    .fascia-sinistra{
+        .blocco{
+            .blocco-content{
+                .bottone{
+                    right: calc(100% - 38vh);
+                }
+            }
+        }
+    }
+}
+
+.questo{
+    background-color: $colore-riquadro;
+    color: $colore-testo;
+    transition: all 0.5s;
+    .filter{
+        display: none;
+    }
+    img{
+        filter: none !important;
+    }
+    .eyebrow{
+        color: $colore-principale !important;
+    }
+}
+
+.container-progetto{
+    margin-top: 0;
+    padding-top: 29vh !important;
+    font-family: $font-mono;
+    background-color: $colore-riquadro;
+    color: $colore-testo;
+    .destra, .sinistra{
+        margin-bottom: 10vh;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .destra{
+        flex-direction: row-reverse;
+    }
+    .progetto-titolo{
+        color: white;
+        font-size: 15vh;
+        margin-bottom: 10vh !important;
+    }
+    .progetto-eyebrow{
+        font-size: 4vh;
+        color: $colore-principale;
+    }
+    .progetto-img{
+        width: 100%;
+    }
+    .iframe{
+        height: 100vh;
+    }
+    .fixed{
+        position: fixed;
+        top:50%;
+        transform: translateY(-50%);
+        width: calc(calc(100% - 40vh - 42px) / 12 * 5);
+    }
+    .bottom{
+        top:100%;
+        transform: translateY(-100%);
+    }
+    .pro-container-testo{
+        .progetto-sottotitolo{
+            color: $colore-principale;
+            font-size: 5vh;
+        }
+        .progetto-testo{
+            font-size: 3vh;
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+.sticky{
+    position: sticky !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.relative{
+    position: relative;
+}
+
+.bottone-pro{
+    position: absolute;
+    text-align: center;
+    font-family: $font-mono;
+    text-transform: lowercase;
+    .vedi{
+        font-size: 3vh;
+        color: $colore-testo;
+        transition-duration: 0.5s;
+        margin-top: 2vh;
+    }
+    svg{
+        width: 5vh;
+        .freccia{
+            fill: transparent;
+            stroke: $colore-testo;
+            stroke-width: 20px;
+            transition-duration: 0.5s;
+        }
+    }
+
+    &:hover{
+        .vedi{
+            color: $colore-principale;
+        }
+        svg{
+            .freccia{
+                stroke: $colore-principale;
+            }
+        }
+    }
+}
+
+.apri{
+    right: calc(30px + 5vh);
+    svg{
+        transform: rotate(-90deg);
+    }
+}
+
+.chiudi{
+    left: calc(30px + 5vh);
+    svg{
+        transform: rotate(90deg);
+    }
+}
+
+.gira{
+    left: 50%;
+    transform: translateX(-50%);
+    svg{
+        height: 5vh;
+        width: auto;
+        .freccia{
+            stroke-width: 10px;
+        }
+    }
+    .vedi{
+        margin-top: 0.4vh;
+    }
+}
+
+.block{
+    display: block;
+}
+
+.none{
+    display: none;
+}
+
+.bottoni{
+    height: 13vh;
+    padding-top: 2vh;
+    background-color: $colore-riquadro;
+}
+
+.destra, .sinistra{
+    margin-bottom: 10vh;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+.destra{
+    flex-direction: row-reverse;
+}
+
+.chisono-img{
+    width: 100%;
+}
+
+.chisono-testo{
+    font-size: 4vh;
+    margin-bottom: 0 !important;
+    color: $colore-sfondo;
+}
+
+.fascia-cv{
+    font-size: 2.3vh;
+    &:last-child{
+        border-bottom: 2px solid $colore-testo;
+    }
+    .cv-sopra{
+        position: relative;
+        margin-bottom: 0 !important;
+        border-top: 2px solid $colore-testo;
+        &:hover{
+            .cv-titolo{
+                color: $colore-testo;
+            }
+            .lverticale{
+                background-color: $colore-testo;
+            }
+            .lorizzontale{
+                background-color: $colore-testo;
+            }
+        }
+        .cv-titolo{
+            margin-top: 1vh;
+            margin-bottom: 0.5vh;
+            font-size: 7vh;
+            transition-duration: 0.5s;
+        }
+    }
+    .lverticale{
+        height: 4vh;
+        width: 1vh;
+        background-color: $colore-scuro;
+        position: absolute;
+        top: 50%;
+        right: 3.5vh;
+        transform: translateY(-50%);
+        transition-duration: 0.5s;
+    }
+    .lorizzontale{
+        height: 1vh;
+        width: 4vh;
+        background-color: $colore-scuro;
+        position: absolute;
+        top: 50%;
+        right: 2vh;
+        transform: translateY(-50%);
+        transition-duration: 0.5s;
+    }
+    .content-cv{
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        .riga{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: calc(100% - 30px);
+            transform: translateX(-50%);
+            border-bottom: 1px solid $colore-testo;
+        }
+        .riga-cv{
+            position: relative;
+            margin-bottom: 2vh;
+            padding-top: 1vh;
+            padding-bottom: 2vh;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &:first-child{
+                padding-top: 3vh !important;
+                border-top: 2px solid $colore-testo;
+            }
+            .anno{
+                font-family: $font-titolo;
+                font-size: 4.5vh;
+                margin-bottom: 2vh;
+            }
+            .riga-titolo{
+                font-size: 3vh;
+                font-weight: 700;
+                margin-bottom: 1vh;
+            }
+            .riga-testo{
+                font-size: 5vh;
+                font-weight: 700;
+                margin-bottom: 2vh;
+                color: $colore-testo;
+            }
+            .testo{
+                margin-bottom: 2vh;
+            }
+            .testo-elenco{
+                margin-bottom: 0vh;
+            }
+            .elenco{
+                margin-bottom: 2vh;
+                li{
+                    text-transform: uppercase;
+                }
+            }
+            .elenco-acapo{
+                margin-bottom: 2vh;
+                li{
+                    margin-bottom: 2vh;
+                }
+            }
+        }
+    }
+}
+
+.bottone-sito{
+    .p-link{
+        font-size: 2.5vh;
+        color: $colore-scuro;
+        margin-bottom: 2vh;
+        transition: all 0.5s;
+        width: 22vh;
+        &:hover{
+            color: $colore-testo;
+        }
+    }
+}
+
+.attivo{
+    .cv-titolo{
+        color: $colore-testo;
+    }
+    .lverticale{
+        background-color: $colore-testo;
+    }
+    .lorizzontale{
+        background-color: $colore-testo;
+    }
+    .lverticale{
+        height: 0 !important;
+    }
+}
+
+.mobile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $colore-scuro;
+    z-index: 9999;
+    display: none;
+    .title-mobile{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $colore-principale;
+        font-family: $font-titolo;
+        font-size: 5vh;
+        text-align: center;
+
+    }
+
+}
+@media screen and (max-width: 992px) {
+    .mobile{
+        display: block;
+    }
+}
+
+.ab{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+}
