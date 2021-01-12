@@ -1,6 +1,6 @@
 .home {
-  --colore-principale: #ffff31;
-  --colore-cursore: #ffff31;
+  --colore-principale: #ffff59;
+  --colore-cursore: #ffff59;
 }
 
 .uno {
@@ -19,7 +19,7 @@
 }
 
 .quattro {
-  --colore-principale: #ffff31;
+  --colore-principale: #ffff59;
   --colore-cursore: white;
 }
 
@@ -41,7 +41,7 @@
 
 .colore-quattro {
   --colore-principale: #E7BE00 !important;
-  --colore-riquadro: #ba8f00 !important;
+  --colore-riquadro: #dda01b !important;
   --colore-cursore: white;
 }
 
@@ -208,7 +208,7 @@ a:hover {
   stroke-linecap: round;
   stroke-dasharray: 700 700;
   stroke-dashoffset: 50;
-  stroke: #ffff31 !important;
+  stroke: #ffff59 !important;
   stroke-width: 4px !important;
   animation-duration: 1s;
   fill: none;
@@ -220,7 +220,7 @@ a:hover {
   stroke-linecap: round;
   stroke-dasharray: 700 700;
   stroke-dashoffset: 50;
-  stroke: #ffff31 !important;
+  stroke: #ffff59 !important;
   stroke-width: 4px !important;
   animation-duration: 1s;
   animation-delay: -1.3s;
@@ -341,7 +341,7 @@ h1 {
 .container-codici {
   font-size: 2vh;
   line-height: calc(2.5vh*1.1);
-  color: #ffff31;
+  color: #ffff59;
   font-family: "Roboto Mono", monospace;
   padding: 0 !important;
   padding-top: 1.8vh !important;
@@ -547,7 +547,7 @@ html a {
   position: fixed;
   z-index: 999;
   pointer-events: none;
-  border-color: #ffff31;
+  border-color: #ffff59;
   transition: transform 0.5s;
 }
 

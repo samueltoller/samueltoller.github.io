@@ -4,15 +4,15 @@ $colore-sfondo: #121212;
 $colore-scuro: #121212;
 $colore-testo: white;
 $neutro: #c5c5c5;
-$colore-home: #ffff31;
+$colore-home: #ffff59;
 $colore1: #00FF62;
 $colore2: #17dcb4;
 $colore3: #0092FF;
 $colore4: #FFF650;
 
 .home {
-    --colore-principale: #ffff31;
-    --colore-cursore: #ffff31;
+    --colore-principale: #ffff59;
+    --colore-cursore: #ffff59;
 }
 .uno {
     --colore-principale: #00FF62;
@@ -27,7 +27,7 @@ $colore4: #FFF650;
     --colore-cursore: white;
 }
 .quattro {
-    --colore-principale: #ffff31;
+    --colore-principale: #ffff59;
     --colore-cursore: white;
 }
 
@@ -46,7 +46,7 @@ $colore4: #FFF650;
 }
 .colore-quattro {
     --colore-principale: #E7BE00 !important;
-    --colore-riquadro: #ba8f00 !important;
+    --colore-riquadro: #dda01b !important;
     --colore-cursore: white;
 }
 .colore-cinque {
