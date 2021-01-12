@@ -23,7 +23,6 @@ $(document).ready(function() {
 
     $panel.each(function () {
       var $this = $(this);
-      //console.log(document.getElementById("pro-container-testo-" + $(this).data('number')).offsetHeight / 2)
       document.getElementById("sticky-" + $(this).data('number')).style.marginTop = document.getElementById("pro-container-testo-" + $(this).data('number')).offsetHeight / 2 + "px";
       document.getElementById("sticky-" + $(this).data('number')).style.marginBottom = "-" + document.getElementById("pro-container-testo-" + $(this).data('number')).offsetHeight / 2 + "px";
     });      
@@ -102,7 +101,7 @@ function createMovers(){
 createMovers();
 
 function numeriCasuali(){
-    for (i = 1; i <= 21; i++) {
+    for (i = 1; i <= 30; i++) {
         var rand = Math.floor(Math.random() * 40) + 10;
         var randd = Math.floor(Math.random() * 5);
         var randdd = Math.floor(Math.random() * 2);
@@ -214,9 +213,9 @@ if (
 
 
 function numeriCasualiImg(){
-    for (i = 1; i <= 30; i++) {
-        var rand = Math.floor(Math.random() * 40) + 10;
-        var randd = Math.floor(Math.random() * 5);
+    for (i = 1; i <= 36; i++) {
+        var rand = Math.floor(Math.random() * 500 + 500)/100;
+        var randd = Math.floor(Math.random() * 6);
         var randdd = Math.floor(Math.random() * 2);
         document.getElementById("pathimg" + i).style.animationDuration = rand + "s";
         document.getElementById("pathimg" + i).style.animationDelay = "-" + randd + "s";

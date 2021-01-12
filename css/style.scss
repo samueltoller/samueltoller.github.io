@@ -186,8 +186,17 @@ a{
     transition-duration: 0.5s;
 }
 
+@keyframes dash2 {
+    to {
+        stroke-dashoffset: -8000;
+    }
+}
+
 .path2{
+    animation-name: dash2;
     stroke-width: 15px !important;
+    stroke-dasharray: 1000 50000;
+    animation-duration: 2s;
 }
 
 @keyframes dashlogo1 {
@@ -1083,4 +1092,12 @@ html {
     left: 0;
     z-index: 999;
     width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.fine{
+    .path2{
+        stroke-width: 7px !important;
+        stroke-dasharray: 1000 50000;
+    }
 }

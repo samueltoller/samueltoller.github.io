@@ -357,25 +357,43 @@ function numeriCasuali(){
 }
 
 numeriCasuali();
- 
-$(document).ready(function() {
-    setTimeout(function(){
-        document.getElementById("loading").style.animation = "fadeIn 0.5s";
-    }, 3000);
-    setTimeout(function(){
-        document.getElementById("loading").style.display = "none";
-        document.getElementById("chisono").style.top = "0";
-        document.getElementById("chisono").style.opacity = "1";
-    }, 3500);
-    setTimeout(function(){
-        document.getElementById("curriculum").style.top = "0";
-        document.getElementById("curriculum").style.opacity = "1";
-    }, 3700);
-    setTimeout(function(){
-        document.getElementById("portfolio").style.top = "0";
-        document.getElementById("portfolio").style.opacity = "1";
-    }, 3900);
 
+console.log(sessionStorage.isVisited);
+
+$(document).ready(function() {
+    if (!sessionStorage.isVisited) {
+        sessionStorage.isVisited = 'true'
+        setTimeout(function(){
+            document.getElementById("loading").style.animation = "fadeIn 0.5s";
+        }, 3000);
+        setTimeout(function(){
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("chisono").style.top = "0";
+            document.getElementById("chisono").style.opacity = "1";
+        }, 3200);
+        setTimeout(function(){
+            document.getElementById("curriculum").style.top = "0";
+            document.getElementById("curriculum").style.opacity = "1";
+        }, 3400);
+        setTimeout(function(){
+            document.getElementById("portfolio").style.top = "0";
+            document.getElementById("portfolio").style.opacity = "1";
+        }, 3600); 
+    }else{
+        document.getElementById("loading").style.display = "none";
+        setTimeout(function(){
+            document.getElementById("chisono").style.top = "0";
+            document.getElementById("chisono").style.opacity = "1";
+        }, 200);
+        setTimeout(function(){
+            document.getElementById("curriculum").style.top = "0";
+            document.getElementById("curriculum").style.opacity = "1";
+        }, 400);
+        setTimeout(function(){
+            document.getElementById("portfolio").style.top = "0";
+            document.getElementById("portfolio").style.opacity = "1";
+        }, 600); 
+    }
 });
 
 function createMovers(){
