@@ -123,8 +123,19 @@ $('.link').mouseleave(function(){
   document.getElementById("cursorbig").style.transform = "scale(1)";
   document.getElementById("cursor").style.transform = "scale(1)";
 });
+$('.link1').mouseenter(function(){
+  document.getElementById("cursorbig").style.transform = "scale(0)";
+  document.getElementById("cursor").style.transform = "scale(1.5)";
+});
+$('.link1').mouseleave(function(){
+  document.getElementById("cursorbig").style.transform = "scale(1)";
+  document.getElementById("cursor").style.transform = "scale(1)";
+});
 $('.link').on( "click", function() {
   window.open('http://www.telepacetrento.it/', '_blank'); 
+});
+$('.link1').on( "click", function() {
+  window.open('https://cloud.protopie.io/p/1a069ec807', '_blank'); 
 });
 
 var pagina = 1;

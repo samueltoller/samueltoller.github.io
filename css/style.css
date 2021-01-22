@@ -28,38 +28,44 @@
 }
 
 .colore-due {
-  --colore-principale: #D292C0 !important;
-  --colore-riquadro: #b869a2 !important;
+  --colore-principale: #fca9e5 !important;
+  --colore-riquadro: #cb75b3 !important;
   --colore-cursore: white;
 }
 
 .colore-tre {
-  --colore-principale: #95C11F !important;
+  --colore-principale: #b5df42 !important;
   --colore-riquadro: #7a9f16 !important;
   --colore-cursore: white;
 }
 
 .colore-quattro {
-  --colore-principale: #E7BE00 !important;
-  --colore-riquadro: #dda01b !important;
+  --colore-principale: #ffd200 !important;
+  --colore-riquadro: #e5ab2f !important;
   --colore-cursore: white;
 }
 
 .colore-cinque {
   --colore-principale: #FFF650 !important;
-  --colore-riquadro: #f7c036 !important;
+  --colore-riquadro: #ffce51 !important;
   --colore-cursore: white;
 }
 
 .colore-sei {
-  --colore-principale: #FA4646 !important;
-  --colore-riquadro: #962727 !important;
+  --colore-principale: #ff5252 !important;
+  --colore-riquadro: #b33030 !important;
   --colore-cursore: white;
 }
 
 .colore-sette {
   --colore-principale: #487797 !important;
   --colore-riquadro: #29506a !important;
+  --colore-cursore: white;
+}
+
+.colore-otto {
+  --colore-principale: #B4ADB5 !important;
+  --colore-riquadro: #706F76 !important;
   --colore-cursore: white;
 }
 
@@ -84,7 +90,6 @@ a:hover {
   background-color: #121212;
   z-index: 999;
 }
-
 .loading svg {
   height: 100%;
   width: auto;
@@ -108,7 +113,6 @@ a:hover {
     opacity: 0;
   }
 }
-
 .sfondo {
   position: absolute;
   top: 0;
@@ -119,7 +123,6 @@ a:hover {
   transition: background-color 0.5s;
   background-color: var(--colore-principale);
 }
-
 .sfondo figure {
   height: 97vh;
   width: calc(100% - 3vh);
@@ -132,9 +135,8 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .sfondo figure .motion {
-  opacity: .035;
+  opacity: 0.035;
   background: url(../img/noise.gif) repeat 50%;
   height: 100%;
 }
@@ -147,7 +149,6 @@ a:hover {
   width: 100vw;
   overflow: hidden;
 }
-
 .animazione .contenitore-animazione svg {
   position: absolute;
   left: 50%;
@@ -161,7 +162,6 @@ a:hover {
     stroke-dashoffset: -2000;
   }
 }
-
 .path {
   animation-name: dash;
   animation-iteration-count: infinite;
@@ -181,7 +181,6 @@ a:hover {
     stroke-dashoffset: -8000;
   }
 }
-
 .path2 {
   animation-name: dash2;
   stroke-width: 15px !important;
@@ -194,13 +193,11 @@ a:hover {
     stroke-dashoffset: 100%;
   }
 }
-
 @keyframes dashlogo2 {
   to {
     stroke-dashoffset: 100%;
   }
 }
-
 .pathlogo1 {
   animation-name: dashlogo1;
   animation-iteration-count: infinite;
@@ -254,11 +251,9 @@ h1 {
   color: #121212;
   font-family: "Roboto Mono", monospace;
 }
-
 .container-fluid a {
   color: #121212;
 }
-
 .container-fluid a:hover {
   color: #121212;
 }
@@ -268,7 +263,6 @@ h1 {
   top: 0;
   width: 100vw;
 }
-
 .contenitore-nome .nome {
   position: absolute;
   top: 1vh;
@@ -286,7 +280,6 @@ h1 {
   transform: translateY(-50%);
   height: 35vh;
 }
-
 .cnpagina .nome {
   font-size: 30vh;
   margin-bottom: 0 !important;
@@ -316,18 +309,15 @@ h1 {
   text-align: right;
   padding: 0 !important;
 }
-
 .container-foto .foto {
   height: 60vh;
 }
-
 .container-foto .foto path {
   fill: transparent;
   stroke: var(--colore-principale) !important;
   stroke-width: 2px !important;
   transition-duration: 0.5s;
 }
-
 .container-foto .foto circle {
   fill: var(--colore-principale) !important;
   stroke: var(--colore-principale) !important;
@@ -346,7 +336,6 @@ h1 {
   padding: 0 !important;
   padding-top: 1.8vh !important;
 }
-
 .container-codici .codici {
   margin-bottom: -0.5vh !important;
 }
@@ -370,14 +359,12 @@ h1 {
 .container-menu {
   margin-top: 10vh;
 }
-
 .container-menu .menu {
   font-family: "Bebas Neue";
   font-size: 5vh;
   list-style: none;
   padding: 0;
 }
-
 .container-menu .menu li {
   display: inline-block;
   float: left;
@@ -388,20 +375,16 @@ h1 {
   border-top: 2px solid white;
   border-bottom: 2px solid white;
 }
-
 .container-menu .menu li .sopra {
   transition-duration: 0.5s;
   height: 7vh;
 }
-
 .container-menu .menu li:hover .sopra {
   margin-top: -7vh;
 }
-
 .container-menu .menu li:hover .sottolineato {
   top: 0;
 }
-
 .container-menu .menu li a {
   color: white;
   display: block;
@@ -410,11 +393,9 @@ h1 {
   width: 100%;
   height: 14vh;
 }
-
 .container-menu .menu li a:hover {
   transition-duration: 0.5s;
 }
-
 .container-menu .menu .chisono {
   position: absolute;
   left: 0;
@@ -423,7 +404,6 @@ h1 {
   transform: translateY(0vh);
   transition: trans 0.5s, top 0.5s;
 }
-
 .container-menu .menu .curriculum {
   position: absolute;
   left: 50%;
@@ -432,7 +412,6 @@ h1 {
   opacity: 0;
   transition: opacity 0.5s, top 0.5s;
 }
-
 .container-menu .menu .portfolio {
   position: absolute;
   right: 0;
@@ -440,7 +419,6 @@ h1 {
   opacity: 0;
   transition: opacity 0.5s, top 0.5s;
 }
-
 .container-menu .menu .sottolineato {
   width: 100%;
   height: 7vh;
@@ -465,13 +443,11 @@ h1 {
   overflow: hidden;
   z-index: 9;
 }
-
 .contatti .ctitolo {
   padding: 2vh 3vh;
   font-size: 4vh;
   margin-bottom: 0 !important;
 }
-
 .contatti .ctesto {
   position: absolute;
   top: 50%;
@@ -482,11 +458,9 @@ h1 {
   font-family: "Roboto Mono", monospace;
   font-weight: bold;
 }
-
 .contatti #ctesto1 {
   left: 23vh;
 }
-
 .contatti #ctesto2 {
   right: 23vh;
 }
@@ -515,11 +489,9 @@ h1 {
     transform: translateX(-100%);
   }
 }
-
 html {
   cursor: none;
 }
-
 html a {
   cursor: none;
 }
@@ -532,11 +504,9 @@ html a {
   z-index: 999;
   pointer-events: none;
 }
-
 #cursor svg {
   position: absolute;
 }
-
 #cursor .circle {
   transition: stroke 0.5s;
 }
@@ -550,7 +520,6 @@ html a {
   border-color: #ffff59;
   transition: transform 0.5s;
 }
-
 #cursorbig .triangle {
   transition: stroke 0.5s;
 }
@@ -567,7 +536,6 @@ html a {
     transform: rotate(360deg);
   }
 }
-
 @keyframes scale {
   from {
     transform: scale(1);
@@ -576,7 +544,6 @@ html a {
     transform: scale(1.5);
   }
 }
-
 .triangle {
   stroke: var(--colore-cursore);
   stroke-width: 10px;
@@ -604,29 +571,24 @@ html a {
   font-family: "Roboto Mono", monospace;
   text-transform: lowercase;
 }
-
 .scroll-down .vedi {
   font-size: 3.5vh;
   color: white;
   margin-bottom: 2vh;
   transition-duration: 0.5s;
 }
-
 .scroll-down svg {
   height: 4vh;
 }
-
 .scroll-down svg .freccia {
   fill: transparent;
   stroke: white;
   stroke-width: 10px;
   transition-duration: 0.5s;
 }
-
 .scroll-down:hover .vedi {
   color: var(--colore-principale);
 }
-
 .scroll-down:hover svg .freccia {
   stroke: var(--colore-principale);
 }
@@ -634,11 +596,9 @@ html a {
 .indietro {
   top: 18vh;
 }
-
 .indietro .vedi {
   margin-top: 2vh;
 }
-
 .indietro svg {
   transform: rotate(180deg);
 }
@@ -650,17 +610,14 @@ html a {
 .fascia-progetto:last-child .fascia {
   margin-bottom: 0 !important;
 }
-
 .fascia-progetto .fascia {
   margin-bottom: 20vh;
   display: flex;
   align-items: center;
 }
-
 .fascia-progetto .fascia .blocco {
   padding: 0 !important;
 }
-
 .fascia-progetto .fascia .blocco .img-progetto {
   height: 60vh;
   position: relative;
@@ -668,7 +625,6 @@ html a {
   overflow: hidden;
   transition: all 0.5s;
 }
-
 .fascia-progetto .fascia .blocco .img-progetto img {
   position: absolute;
   top: 50%;
@@ -680,27 +636,23 @@ html a {
   padding: 3vh;
   filter: grayscale(100%);
 }
-
 .fascia-progetto .fascia .blocco .blocco-content {
   position: relative;
   padding-right: 10vh;
   padding-left: 10vh;
   padding-bottom: 6.2vh;
 }
-
 .fascia-progetto .fascia .blocco .blocco-content .eyebrow {
   font-size: 4vh;
   color: white;
   margin-bottom: 4vh !important;
 }
-
 .fascia-progetto .fascia .blocco .blocco-content .titolo-progetto {
   font-size: 15vh;
   line-height: 14vh;
   margin-bottom: 4vh !important;
   color: white;
 }
-
 .fascia-progetto .fascia .blocco .blocco-content .bottone {
   position: absolute;
   right: 10vh;
@@ -710,7 +662,6 @@ html a {
   border-top: 2px solid white;
   border-bottom: 2px solid white;
 }
-
 .fascia-progetto .fascia .blocco .blocco-content .bottone .cta {
   position: absolute;
   top: 0;
@@ -720,27 +671,22 @@ html a {
   color: white;
   transition: all 0.5s;
 }
-
 .fascia-progetto .fascia .blocco .blocco-content .bottone #cta2 {
   top: 6.2vh;
   background-color: var(--colore-principale);
   color: var(--colore-riquadro);
 }
-
 .fascia-progetto .fascia .blocco .blocco-content .bottone:hover #cta1 {
   top: -6.2vh;
 }
-
 .fascia-progetto .fascia .blocco .blocco-content .bottone:hover #cta2 {
   top: 0;
 }
-
 .fascia-progetto .fascia-destra {
   display: flex;
   flex-direction: row-reverse;
   text-align: right;
 }
-
 .fascia-progetto .fascia-sinistra .blocco .blocco-content .bottone {
   right: calc(100% - 38vh);
 }
@@ -750,15 +696,12 @@ html a {
   color: white;
   transition: all 0.5s;
 }
-
 .questo .filter {
   display: none;
 }
-
 .questo img {
   filter: none !important;
 }
-
 .questo .eyebrow {
   color: var(--colore-principale) !important;
 }
@@ -770,55 +713,44 @@ html a {
   background-color: var(--colore-riquadro);
   color: white;
 }
-
 .container-progetto .destra, .container-progetto .sinistra {
   margin-bottom: 10vh;
 }
-
 .container-progetto .destra:last-child, .container-progetto .sinistra:last-child {
   margin-bottom: 0;
 }
-
 .container-progetto .destra {
   flex-direction: row-reverse;
 }
-
 .container-progetto .progetto-titolo {
   color: white;
   font-size: 15vh;
   margin-bottom: 10vh !important;
 }
-
 .container-progetto .progetto-eyebrow {
   font-size: 4vh;
   color: var(--colore-principale);
 }
-
 .container-progetto .progetto-img {
   width: 100%;
 }
-
 .container-progetto .iframe {
   height: 100vh;
 }
-
 .container-progetto .fixed {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
   width: calc(calc(100% - 40vh - 42px) / 12 * 5);
 }
-
 .container-progetto .bottom {
   top: 100%;
   transform: translateY(-100%);
 }
-
 .container-progetto .pro-container-testo .progetto-sottotitolo {
   color: var(--colore-principale);
   font-size: 5vh;
 }
-
 .container-progetto .pro-container-testo .progetto-testo {
   font-size: 3vh;
   margin-bottom: 0 !important;
@@ -840,29 +772,24 @@ html a {
   font-family: "Roboto Mono", monospace;
   text-transform: lowercase;
 }
-
 .bottone-pro .vedi {
   font-size: 3vh;
   color: white;
   transition-duration: 0.5s;
   margin-top: 2vh;
 }
-
 .bottone-pro svg {
   width: 5vh;
 }
-
 .bottone-pro svg .freccia {
   fill: transparent;
   stroke: white;
   stroke-width: 20px;
   transition-duration: 0.5s;
 }
-
 .bottone-pro:hover .vedi {
   color: var(--colore-principale);
 }
-
 .bottone-pro:hover svg .freccia {
   stroke: var(--colore-principale);
 }
@@ -870,7 +797,6 @@ html a {
 .apri {
   right: calc(30px + 5vh);
 }
-
 .apri svg {
   transform: rotate(-90deg);
 }
@@ -878,7 +804,6 @@ html a {
 .chiudi {
   left: calc(30px + 5vh);
 }
-
 .chiudi svg {
   transform: rotate(90deg);
 }
@@ -887,16 +812,13 @@ html a {
   left: 50%;
   transform: translateX(-50%);
 }
-
 .gira svg {
   height: 5vh;
   width: auto;
 }
-
 .gira svg .freccia {
   stroke-width: 10px;
 }
-
 .gira .vedi {
   margin-top: 0.4vh;
 }
@@ -918,7 +840,6 @@ html a {
 .destra, .sinistra {
   margin-bottom: 10vh;
 }
-
 .destra:last-child, .sinistra:last-child {
   margin-bottom: 0;
 }
@@ -940,36 +861,29 @@ html a {
 .fascia-cv {
   font-size: 2.3vh;
 }
-
 .fascia-cv:last-child {
   border-bottom: 2px solid white;
 }
-
 .fascia-cv .cv-sopra {
   position: relative;
   margin-bottom: 0 !important;
   border-top: 2px solid white;
 }
-
 .fascia-cv .cv-sopra:hover .cv-titolo {
   color: white;
 }
-
 .fascia-cv .cv-sopra:hover .lverticale {
   background-color: white;
 }
-
 .fascia-cv .cv-sopra:hover .lorizzontale {
   background-color: white;
 }
-
 .fascia-cv .cv-sopra .cv-titolo {
   margin-top: 1vh;
   margin-bottom: 0.5vh;
   font-size: 7vh;
   transition-duration: 0.5s;
 }
-
 .fascia-cv .lverticale {
   height: 4vh;
   width: 1vh;
@@ -980,7 +894,6 @@ html a {
   transform: translateY(-50%);
   transition-duration: 0.5s;
 }
-
 .fascia-cv .lorizzontale {
   height: 1vh;
   width: 4vh;
@@ -991,13 +904,11 @@ html a {
   transform: translateY(-50%);
   transition-duration: 0.5s;
 }
-
 .fascia-cv .content-cv {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s;
 }
-
 .fascia-cv .content-cv .riga {
   position: absolute;
   bottom: 0;
@@ -1006,62 +917,50 @@ html a {
   transform: translateX(-50%);
   border-bottom: 1px solid white;
 }
-
 .fascia-cv .content-cv .riga-cv {
   position: relative;
   margin-bottom: 2vh;
   padding-top: 1vh;
   padding-bottom: 2vh;
 }
-
 .fascia-cv .content-cv .riga-cv:last-child {
   margin-bottom: 0;
 }
-
 .fascia-cv .content-cv .riga-cv:first-child {
   padding-top: 3vh !important;
   border-top: 2px solid white;
 }
-
 .fascia-cv .content-cv .riga-cv .anno {
   font-family: "Bebas Neue";
   font-size: 4.5vh;
   margin-bottom: 2vh;
 }
-
 .fascia-cv .content-cv .riga-cv .riga-titolo {
   font-size: 3vh;
   font-weight: 700;
   margin-bottom: 1vh;
 }
-
 .fascia-cv .content-cv .riga-cv .riga-testo {
   font-size: 5vh;
   font-weight: 700;
   margin-bottom: 2vh;
   color: white;
 }
-
 .fascia-cv .content-cv .riga-cv .testo {
   margin-bottom: 2vh;
 }
-
 .fascia-cv .content-cv .riga-cv .testo-elenco {
   margin-bottom: 0vh;
 }
-
 .fascia-cv .content-cv .riga-cv .elenco {
   margin-bottom: 2vh;
 }
-
 .fascia-cv .content-cv .riga-cv .elenco li {
   text-transform: uppercase;
 }
-
 .fascia-cv .content-cv .riga-cv .elenco-acapo {
   margin-bottom: 2vh;
 }
-
 .fascia-cv .content-cv .riga-cv .elenco-acapo li {
   margin-bottom: 2vh;
 }
@@ -1073,7 +972,6 @@ html a {
   transition: all 0.5s;
   width: 22vh;
 }
-
 .bottone-sito .p-link:hover {
   color: white;
 }
@@ -1081,15 +979,12 @@ html a {
 .attivo .cv-titolo {
   color: white;
 }
-
 .attivo .lverticale {
   background-color: white;
 }
-
 .attivo .lorizzontale {
   background-color: white;
 }
-
 .attivo .lverticale {
   height: 0 !important;
 }
@@ -1104,7 +999,6 @@ html a {
   z-index: 9999;
   display: none;
 }
-
 .mobile .title-mobile {
   position: absolute;
   top: 50%;
@@ -1121,7 +1015,6 @@ html a {
     display: block;
   }
 }
-
 .ab {
   position: absolute;
   top: 0;
@@ -1136,3 +1029,5 @@ html a {
   stroke-width: 7px !important;
   stroke-dasharray: 1000 50000;
 }
+
+/*# sourceMappingURL=style.css.map */
