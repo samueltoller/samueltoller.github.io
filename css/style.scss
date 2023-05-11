@@ -157,7 +157,7 @@ a{
     top: 0;
     left: 0;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     .contenitore-animazione{
         svg{
@@ -279,7 +279,7 @@ h1{
 .contenitore-nome{
     position: absolute;
     top: 0;
-    width: 100vw;
+    width: 100%;
     .nome{
         position: absolute;
         top: 1vh;
